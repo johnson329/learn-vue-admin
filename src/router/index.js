@@ -16,6 +16,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // 懒加载 访问该路由的时候，组件才会被加载 about.js才会被请求
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]

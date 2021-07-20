@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+<!--    路由出口 也就是对应上面的路由要显示的组件 -->
     <router-view/>
   </div>
 </template>
