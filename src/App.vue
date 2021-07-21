@@ -2,8 +2,7 @@
   <div id="app">
     <div id="nav">
       <h1>学vue仓库</h1>
-      <el-button>默认按钮</el-button>
-      <el-button type="danger" round>危险按钮</el-button>
+
       <router-view/>
 
     </div>
