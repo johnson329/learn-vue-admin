@@ -1,57 +1,48 @@
 <template>
 
+  <!--      有子菜单 打开或关闭触发的事件-->
+  <!--      @open="handleOpen"-->
+  <!--      @close="handleClose"-->
     <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
+      default-active="/"
+      class="nav-menu"
       background-color="#545c64"
       text-color="#fff"
-      active-text-color="#ffd04b">
-<!--      <el-submenu index="1">-->
-<!--        <template slot="title">-->
-<!--          <i class="el-icon-location"></i>-->
-<!--          <span>导航一</span>-->
-<!--        </template>-->
-<!--        <el-menu-item-group>-->
-<!--          <template slot="title">分组一</template>-->
-<!--          <el-menu-item index="1-1">选项1</el-menu-item>-->
-<!--          <el-menu-item index="1-2">选项2</el-menu-item>-->
-<!--        </el-menu-item-group>-->
-<!--        <el-menu-item-group title="分组2">-->
-<!--          <el-menu-item index="1-3">选项3</el-menu-item>-->
-<!--        </el-menu-item-group>-->
-<!--        <el-submenu index="1-4">-->
-<!--          <template slot="title">选项4</template>-->
-<!--          <el-menu-item index="1-4-1">选项1</el-menu-item>-->
-<!--        </el-submenu>-->
-<!--      </el-submenu>-->
-      <el-menu-item index="0">
-        <i class="el-icon-setting"></i>
+      active-text-color="#ffd04b"
+
+      router
+    >
+<!--      router-->
+      <!--      以index为path进行路由调换-->
+
+      <el-menu-item index="/">
+<!--        图标不够 用iconfont -->
+        <i class="el-icon-s-home"></i>
         <span slot="title">首页</span>
       </el-menu-item>
-      <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
+      <el-menu-item index="/content">
+        <i class="el-icon-document"></i>
         <span slot="title">内容管理</span>
       </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-document"></i>
+      <el-menu-item index="/materials">
+<!--        iconfont -->
+        <i class="iconfont icon-image"></i>
         <span slot="title">素材管理</span>
       </el-menu-item>
 
-      <el-menu-item index="3">
+      <el-menu-item index="/articles">
         <i class="el-icon-setting"></i>
         <span slot="title">发布文章</span>
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="/comments">
         <i class="el-icon-setting"></i>
         <span slot="title">评论管理</span>
       </el-menu-item>
-      <el-menu-item index="5">
+      <el-menu-item index="follow-ups">
         <i class="el-icon-setting"></i>
         <span slot="title">粉丝管理</span>
       </el-menu-item>
-      <el-menu-item index="6">
+      <el-menu-item index="settings">
         <i class="el-icon-setting"></i>
         <span slot="title">个人设置</span>
       </el-menu-item>
@@ -73,6 +64,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+.nav-menu {
+  .iconfont{
+    margin-right: 10px;
+    padding-left: 5px;
+  }
+}
 
 </style>

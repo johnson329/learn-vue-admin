@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Login from '@/views/login/index'
 import Layout from '@/views/Layout/index'
 import Home from '@/views/home/index'
+import Article from '@/views/article/index'
 Vue.use(VueRouter)
 
 // 路由配置表
@@ -26,9 +27,16 @@ const routes = [
         home: 'home',
         component: Home
 
+      },
+      // 嵌套路由 不然会在新页面打开
+      {
+        path: '/articles',
+        name: 'article',
+        component: Article
       }
     ]
   }
+
 ]
 
 const router = new VueRouter({
